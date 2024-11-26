@@ -8,7 +8,7 @@
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title>Nasza strona</title>
+  <title>Katalog rozwiązań IT</title>
 </head>
 <body class="bg-white">
 
@@ -27,11 +27,11 @@
     <div data-aos="fade-right" class="relative w-full h-auto text-white mt-[250px] z-10">
         <div class="ml-5 md:ml-[300px] w-[500px]">
             <img class="absolute left-[950px] top-[-40px] w-[650px] duration-300 hover:scale-[103%] hover:rotate-2 z-10 hidden md:flex" src="./assets/hero.png" draggable="false">
-            <h1 class="text-[68px] font-bold text-title mb-3 z-20">Nasza Strona</h1>
+            <h1 class="text-[34px] md:text-[55px] font-bold text-title mb-3 z-20">Katalog <br>rozwiązań IT</h1>
             <p class="max-w-[450px] text-left text-descript">Znajdziesz tutaj przydatne informacje dotyczące naprawy urządzeń na różnych systemach operacyjnych oraz rozwiązywania typowych błędów.</p>
             <div class="flex space-x-5 mt-5 z-20">
                 <button id="scroll_btn" class="bg-btn text-white pt-3 pb-3 pl-8 pr-8 duration-300 hover:bg-btn_hover hover:scale-[98%]">Czytaj więcej</button>
-                <button class="bg-transparent border-[1px] border-btn text-title pt-3 pb-3 pl-8 pr-8 duration-300 hover:scale-[98%] hover:rotate-2">Informacje</button>
+                <button onclick="showModal('infoModal')" class="bg-transparent border-[1px] border-btn text-title pt-3 pb-3 pl-8 pr-8 duration-300 hover:scale-[98%] hover:rotate-2">Informacje</button>
             </div>
         </div>
     </div>
@@ -75,11 +75,38 @@
             </button>
         </div>
 
-        <!-- Oprogramowania -->
+        <!-- Windows -->
         <div data-aos="fade-up" class="w-[350px] min-h-[250px] backdrop-blur-[15px] flex flex-col items-center border border-gray-300 hover:bg-opacity-20 hover:bg-gray-700 hover:border-gray-400 duration-300">
-            <img class="w-[180px] p-2 mt-[20px]" src="./assets/Adobe_Photoshop_CC_icon.svg.png" alt="Oprogramowanie" draggable="false">
-            <h1 class="text-2xl font-bold mb-3 mt-2">Oprogramowania</h1>
+            <img class="w-[180px] p-2 mt-[20px]" src="./assets/windows.png" alt="Oprogramowanie" draggable="false">
+            <h1 class="text-2xl font-bold mb-3 mt-2">Windows</h1>
             <button onclick="showModal('softwareModal')" class="bg-title text-white pt-3 pb-3 pl-[50px] pr-[50px] duration-300 hover:bg-btn_hover hover:scale-[99%] m-5">
+                Czytaj więcej
+            </button>
+        </div>
+
+        <!-- Drukarki -->
+        <div data-aos="fade-up" class="w-[350px] min-h-[250px] backdrop-blur-[15px] flex flex-col items-center border border-gray-300 hover:bg-opacity-20 hover:bg-gray-700 hover:border-gray-400 duration-300">
+            <img class="w-[180px] p-2 mt-[53px]" src="./assets/Drukarka-Atramentowa-Canon-MAXIFY-GX5040-Kolorowa-146961.png" alt="Oprogramowanie" draggable="false">
+            <h1 class="text-2xl font-bold mb-3 mt-2">Drukarki</h1>
+            <button onclick="showModal('drukarkiModal')" class="bg-title text-white pt-3 pb-3 pl-[50px] pr-[50px] duration-300 hover:bg-btn_hover hover:scale-[99%] m-5">
+                Czytaj więcej
+            </button>
+        </div>
+
+        <!-- Przydatne komendy -->
+        <div data-aos="fade-up" class="w-[350px] min-h-[250px] backdrop-blur-[15px] flex flex-col items-center border border-gray-300 hover:bg-opacity-20 hover:bg-gray-700 hover:border-gray-400 duration-300">
+            <img class="w-[180px] p-2 mt-[15px]" src="./assets/7207873.png" alt="Oprogramowanie" draggable="false">
+            <h1 class="text-2xl font-bold mb-3 mt-2">Przydatne komendy</h1>
+            <button onclick="showModal('cmdModal')" class="bg-title text-white pt-3 pb-3 pl-[50px] pr-[50px] duration-300 hover:bg-btn_hover hover:scale-[99%] m-5">
+                Czytaj więcej
+            </button>
+        </div>
+
+        <!-- Linux -->
+        <div data-aos="fade-up" class="w-[350px] min-h-[250px] backdrop-blur-[15px] flex flex-col items-center border border-gray-300 hover:bg-opacity-20 hover:bg-gray-700 hover:border-gray-400 duration-300">
+            <img class="w-[155px] p-2 mt-[15px]" src="./assets/Tux.svg.png" alt="Oprogramowanie" draggable="false">
+            <h1 class="text-2xl font-bold mb-3 mt-2">Linux</h1>
+            <button onclick="showModal('linuxModal')" class="bg-title text-white pt-3 pb-3 pl-[50px] pr-[50px] duration-300 hover:bg-btn_hover hover:scale-[99%] m-5">
                 Czytaj więcej
             </button>
         </div>
@@ -125,19 +152,19 @@
             </button>
         </div>
         <div>
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Najczęstsze błędy, popełniane przez użytkowników smartfonów</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Smartfony, będące nowoczesnymi mini-komputerami, zastąpiły tradycyjne telefony, choć wielu użytkowników nadal nie zna ich pełnych możliwości i zasad użytkowania.</p>
+            <a href="https://tech.wp.pl/najczestsze-bledy-popelniane-przez-uzytkownikow-smartfonow,6034851372819073a" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
         <div class="mt-5">
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Błędy aplikacji na androida</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Jeśli aplikacje na Androidzie często się zawieszają lub nie działają prawidłowo, nasz poradnik oferuje praktyczne wskazówki, które pomogą rozwiązać te problemy i poprawić ich działanie.</p>
+            <a href="https://www.gsmmaniak.pl/1492057/jak-naprawic-aplikacje-android/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
         <div class="mt-5">
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• 5 najczęstszych błędów smartfonów Android</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Smartfony towarzyszą Polakom od ponad dekady, ale mimo zmian technologicznych wielu użytkowników wciąż nie zna podstawowych zasad bezpieczeństwa, co ułatwia popularne oszustwa.</p>
+            <a href="https://www.dobreprogramy.pl/5-najczestszych-bledow-uzytkownikow-smartfonow-android,6628603171088001a" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
     </div>
 </div>
@@ -152,19 +179,19 @@
             </button>
         </div>
         <div>
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Najczęstsze objawy uszkodzenia laptopa</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Uszkodzenie podzespołów w laptopie może prowadzić do problemów z uruchomieniem, niestabilną pracą lub częstymi restartami, co wymaga wizyty w serwisie w celu diagnozy.</p>
+            <a href="https://www.ratujlaptopa.pl/blog/najczestsze-objawy-uszkodzenia-laptopa,288" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
         <div class="mt-5">
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Najczęstsze usterki laptopów i ich objawy</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Laptopy, intensywnie używane w zmiennych warunkach, są narażone na różne usterki, a artykuł omawia najczęstsze przyczyny awarii tych urządzeń.</p>
+            <a href="https://techpolska.pl/najczestsze-usterki-laptopow-i-ich-objawy/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
         <div class="mt-5">
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Brak podświetlenia matrycy w laptopie - przyczyny i naprawa</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Czarny ekran lub uszkodzenie matrycy, objawiające się brakiem podświetlenia, migotaniem lub nierównomiernym światłem, wymaga szybkiej diagnozy i naprawy w serwisie, który oferuje darmową wycenę i odbiór sprzętu.</p>
+            <a href="https://www.ratujlaptopa.pl/blog/brak-podswietlenia-matrycy-w-laptopie-przyczyny-i-naprawa,248" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
     </div>
 </div>
@@ -179,46 +206,152 @@
             </button>
         </div>
         <div>
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Rodzaje złącz wideo</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Karty graficzne, laptopy oraz monitory posiadają zazwyczaj kilka różnych gniazd wideo. Zastanawialiście się, czym tak naprawdę różnią się od siebie? Dzisiaj chcielibyśmy wytłumaczyć Wam podstawowe różnice między tymi złączami, abyście już nigdy więcej nie mieli z tym problemu.</p>
+            <a href="https://taniekomputery.pl/porady/rodzaje-gniazd-wideo" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
         <div class="mt-5">
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Co zrobić, gdy klawiatura nie pisze?</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Niedziałająca klawiatura to poważny problem, ponieważ jest jednym z najważniejszych urządzeń w komputerze, zaraz po monitorze, a nawet ważniejszym niż mysz.</p>
+            <a href="https://techporady.pl/co-zrobic-gdy-klawiatura-nie-pisze/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
         <div class="mt-5">
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Jak rozwiązać problem z niedziałającą myszką bezprzewodową?</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Myszki bezprzewodowe są popularne ze względu na wygodę, ale mogą czasami przestać działać bez widocznych objawów awarii; warto poznać potencjalne przyczyny i rozwiązania problemu, gdy myszka nie łączy się z komputerem.</p>
+            <a href="https://techpolska.pl/myszka-bezprzewodowa-nie-dziala-co-robic/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
     </div>
 </div>
 
-<!-- oprogramowanie -->
+<!-- Windows -->
 <div id="softwareModal" class="absolute inset-0 bg-opacity-50 flex justify-center items-center modal" style="display: none;">
     <div class="bg-white p-8 shadow-2xl w-[450px] md:w-[550px] h-auto min-h-[500px] absolute top-[800px] z-100">
         <div class="flex justify-between items-center">
-            <h2 class="text-2xl font-bold mb-4 text-title">Oprogramowania</h2>
+            <h2 class="text-2xl font-bold mb-4 text-title">Windows</h2>
             <button onclick="closeModal('softwareModal')" class="text-title text-[24px] p-2 rounded-md duration-300 hover:scale-[95%]">
                 <img src="./assets/close.png" draggable="false">
             </button>
         </div>
         <div>
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Problem z wysokim zużyciem procesora</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Aby zmniejszyć zużycie procesora, wyłącz aplikacje działające w tle w *Ustawieniach* (Win + I) w sekcji *Zainstalowane aplikacje*, ustawiając dla nich opcję "Nigdy", a następnie uruchom ponownie komputer.</p>
+            <a href="https://thewindowsclub.blog/pl/10-common-computer-problems-how-to-properly-fix-them/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
         <div class="mt-5">
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Popularne błędy w Windowsie – jak sobie z nimi radzić?</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Windows, mimo popularności, często sprawia użytkownikom problemy; poniżej znajdziesz wskazówki, jak radzić sobie z najczęstszymi błędami.</p>
+            <a href="https://fiberlink.pl/blog/popularne-bledy-w-windowsie-jak-sobie-z-nimi-radzic/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
         </div>
         <div class="mt-5">
-            <h2 class="text-descript font-bold">• TITLE</h2>
-            <p class="text-descript max-w-[380px] ml-2">• jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis jakis opis</p>
-            <a href="#" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+            <h2 class="text-descript font-bold">• Komputer piszczy lub wydaje dziwne dźwięki</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Aby rozwiązać problemy z dźwiękiem lub sprzętem, użyj narzędzi diagnostycznych w *Ustawieniach* (Win + I), a w razie nieskuteczności rozwiązań oddaj komputer do serwisu lub rozważ wymianę sprzętu.</p>
+            <a href="https://thewindowsclub.blog/pl/10-common-computer-problems-how-to-properly-fix-them/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+        </div>
+    </div>
+</div>
+
+<!-- drukarki -->
+<div id="drukarkiModal" class="absolute inset-0 bg-opacity-50 flex justify-center items-center modal" style="display: none;">
+    <div class="bg-white p-8 shadow-2xl w-[450px] md:w-[550px] h-auto min-h-[500px] absolute top-[800px] z-100">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl font-bold mb-4 text-title">Drukarki</h2>
+            <button onclick="closeModal('drukarkiModal')" class="text-title text-[24px] p-2 rounded-md duration-300 hover:scale-[95%]">
+                <img src="./assets/close.png" draggable="false">
+            </button>
+        </div>
+        <div>
+            <h2 class="text-descript font-bold">• Drukarka Brother informuje o błędzie</h2>
+            <p class="text-descript max-w-[380px] ml-2">• 
+                Błędy na drukarkach Brother zazwyczaj wskazują na standardowe problemy, które można łatwo rozwiązać, korzystając z prostych i jasnych wskazówek.</p>
+            <a href="https://blog.doktortusz.pl/bledy-w-drukarkach-brother/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-descript font-bold">• Jak naprawić i pozbyć się błędu drukarki HP o kodzie E3, E4 lub E5</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Drukarki HP mogą wyświetlać błędy E3, E4 i E5, które zwykle oznaczają zacięcia papieru, problemy z wkładami lub awarie sprzętu; rozwiązania zależą od przyczyny i obejmują kroki naprawcze.</p>
+            <a href="https://thewindowsclub.blog/pl/how-to-fix-get-rid-of-hp-printer-error-code-e3-e4-or-e5/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-descript font-bold">• Problemy z wkładem atramentowym drukarki HP, w tym błędy niezgodności, braku wkładu lub jego usterki albo błędy rejestracji</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Błędy zgodności wkładów drukujących wynikają z niezgodności modelu, regionu lub słabego połączenia z drukarką; upewnij się, że używasz właściwego typu wkładu lub butelki.</p>
+            <a href="https://support.hp.com/pl-pl/document/ish_2755363-2519855-16" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+        </div>
+    </div>
+</div>
+
+<!-- Komendy -->
+<div id="cmdModal" class="absolute inset-0 bg-opacity-50 flex justify-center items-center modal" style="display: none;">
+    <div class="bg-white p-8 shadow-2xl w-[450px] md:w-[550px] h-auto min-h-[500px] absolute top-[800px] z-100">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl font-bold mb-4 text-title">Przydatne komendy windows/linux</h2>
+            <button onclick="closeModal('cmdModal')" class="text-title text-[24px] p-2 rounded-md duration-300 hover:scale-[95%]">
+                <img src="./assets/close.png" draggable="false">
+            </button>
+        </div>
+        <div>
+            <h2 class="text-descript font-bold">• ipconfig - windows/linux</h2>
+            <p class="text-descript max-w-[380px] ml-2">• 
+                Wyświetla konfigurację sieciową komputera, w tym adres IP, maskę podsieci i bramę domyślną.</p>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-descript font-bold">• tasklist - windows</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Wyświetla listę uruchomionych procesów na komputerze.</p>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-descript font-bold">• ls - linux</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Wyświetla listę plików i katalogów w bieżącym katalogu.</p>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-descript font-bold">• df -h - linux</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Wyświetla informacje o użyciu przestrzeni dyskowej na różnych partycjach.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Linux -->
+<div id="linuxModal" class="absolute inset-0 bg-opacity-50 flex justify-center items-center modal" style="display: none;">
+    <div class="bg-white p-8 shadow-2xl w-[450px] md:w-[550px] h-auto min-h-[500px] absolute top-[800px] z-100">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl font-bold mb-4 text-title">System Linux</h2>
+            <button onclick="closeModal('linuxModal')" class="text-title text-[24px] p-2 rounded-md duration-300 hover:scale-[95%]">
+                <img src="./assets/close.png" draggable="false">
+            </button>
+        </div>
+        <div>
+            <h2 class="text-descript font-bold">• Problemy z Linuxem i połączeniem internetowym</h2>
+            <p class="text-descript max-w-[380px] ml-2">• 
+                Problemy z sieciami bezprzewodowymi i Ethernet można rozwiązywać, sprawdzając ustawienia, połączenia kablowe, działanie karty sieciowej, aktualizując sterowniki lub resetując konfigurację, zachowując ostrożność przy zmianach.</p>
+            <a href="https://blog.askomputer.pl/problemy-z-linuxem-jak-je-rozwiazac/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-descript font-bold">• Firewall i problem z portami</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Zapory ogniowe chronią sieć, ale mogą blokować usługi; rozwiązując problemy, należy sprawdzić ustawienia portów, unikać wyłączania zapory i działać ostrożnie, by nie narazić systemu na zagrożenia.</p>
+            <a href="https://blog.askomputer.pl/problemy-z-linuxem-jak-je-rozwiazac/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+        </div>
+        <div class="mt-5">
+            <h2 class="text-descript font-bold">• Kopie zapasowe i opcje odzyskiwania systemu</h2>
+            <p class="text-descript max-w-[380px] ml-2">• Tworzenie kopii zapasowych i plan odzyskiwania systemu są kluczowe, aby chronić dane przed utratą oraz szybko przywrócić stabilność systemu w przypadku awarii.</p>
+            <a href="https://blog.askomputer.pl/problemy-z-linuxem-jak-je-rozwiazac/" class="text-blue-500 ml-2">• Kliknij aby przejść do strony</a>
+        </div>
+    </div>
+</div>
+
+<!-- Info -->
+<div id="infoModal" class="absolute inset-0 bg-opacity-50 flex justify-center items-center modal z-50" style="display: none;">
+    <div class="bg-white p-8 shadow-2xl w-[450px] md:w-[550px] h-auto min-h-[450px] absolute top-[200px] z-50">
+        <div class="flex justify-between items-center">
+            <h2 class="text-2xl font-bold mb-4 text-title">Technologie</h2>
+            <button onclick="closeModal('infoModal')" class="text-title text-[24px] p-2 rounded-md duration-300 hover:scale-[95%]">
+                <img src="./assets/close.png" draggable="false">
+            </button>
+        </div>
+        <div>
+            <h2 class="text-descript font-bold">• Technologie zastosowane na stronie</h2>
+            <p class="text-descript max-w-[380px] ml-2">•
+                HTML5<br>
+                • Tailwindcss (framework css)<br>
+                • JavaScript<br>
+                • <a href="https://michalsnik.github.io/aos/" target="_blank" class="underline">Aos liblary</a>
+            </p>
         </div>
     </div>
 </div>
@@ -234,7 +367,7 @@
     <div class="container mx-auto px-6 md:px-12">
         <div class="flex items-center justify-center h-full">
             <div class="w-[450px] text-center">
-                <h3 class="text-2xl font-semibold mb-4 text-white">Nasza Strona</h3>
+                <h3 class="text-2xl font-semibold mb-4 text-white">Katalog rozwiązań IT</h3>
                 <p class="text-white/80">Znajdziesz tutaj przydatne informacje dotyczące naprawy urządzeń na różnych systemach operacyjnych oraz rozwiązywania typowych błędów.</p>
             </div>
         </div>        
